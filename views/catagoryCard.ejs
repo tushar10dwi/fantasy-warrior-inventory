@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="font.css">
+        
+    </head>
+    <body>
+        <video autoplay muted loop id="bg-video">
+            <source src="/assets/backgroundVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="crusades header">
+            <img src="/assets/fantasyLogo.png" alt="fantasyLogo" width="150px" height="auto">
+            <h1 class="bloom-animated"> <%= rarity.toUpperCase() %> WARRIORS</h1>
+        </div>
+        <div class="card-content crusades">
+            <% warriors.forEach((warrior) => { %>
+                <div class="cards crusades">
+                    <h2> <%= warrior.name %> </h2>
+                    <p> Sex: <%= warrior.sex %> </p>
+                    <p> Weapon: <%= warrior.weapon %> </p>
+                    <p> Pet: <%= warrior.pet %> </p>
+                    <p> Rarity: <%= warrior.rarity %> </p>
+                    <p> Craftor: <%= warrior.creator %> </p>
+                </div>
+            <% }) %>
+        </div>
+    </body>
+</html>

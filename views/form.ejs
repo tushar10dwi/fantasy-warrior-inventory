@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="font.css">
+        
+    </head>
+    <body>
+        <video autoplay muted loop id="bg-video">
+            <source src="/assets/backgroundVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="crusades header">
+            <img src="/assets/fantasyLogo.png" alt="fantasyLogo" width="150px" height="auto">
+            <h1 class="bloom-animated">CRAFT YOUR WARRIOR</h1>
+        </div>
+        <div class="content crusades bloom-animated">
+            <form action="/create" method="POST">
+                <div class="inputBox">
+                    <div class="left">
+                        <label for="name">Warrior Name</label>
+                        <input type="text" name="name" id="name" class="crusades">
+                        <label for="sex">Sex</label>
+                        <input list="sexes" name="sex" id="sex" class="crusades">
+                        <datalist id="sexes">
+                            <option value="Male">
+                            <option value="Female">
+                            <option value="Unknown">
+                        </datalist>
+                        <label for="weapon">Choose your Weapon</label>
+                        <input list="weapons" name="weapon" id="weapon" class="crusades">
+                        <datalist id="weapons">
+                            <option value="Sword">
+                            <option value="Axe">
+                            <option value="Dagger">
+                            <option value="Bow">
+                            <option value="Crossbow">
+                            <option value="Staff">
+                            <option value="Wand">
+                            <option value="Spear">
+                            <option value="Hammer">
+                            <option value="Brute">
+                        </datalist>
+                    </div>
+                    <div class="right">
+                        <label for="pet">Choose your Pet</label>
+                        <input list="pets" name="pet" id="pet" class="crusades">
+                        <datalist id="pets">
+                            <option value="Dragon">
+                            <option value="Wolf">
+                            <option value="Cat">
+                            <option value="Bird">
+                            <option value="Golem">
+                            <option value="Fairy">
+                            <option value="Beast">
+                            <option value="Spirit">
+                            <option value="Toad">
+                            <option value="Snake">
+                        </datalist>
+                        <label for="rarity">Rarity</label>
+                        <input list="tags" name="rarity" id="rarity" class="crusades">
+                        <datalist id="tags">
+                            <option value="Common">
+                            <option value="Special">
+                            <option value="Rare">
+                            <option value="Epic">
+                            <option value="Legendary">
+                            <option value="Mythical">
+                        </datalist>
+                        <label for="creator">Your Name</label>
+                        <input type="text" name="creator" id="creator" class="crusades">
+                    </div>
+                </div>
+                <button type="submit" class="crusades bloom-animated">Craft</button>
+            </form>
+        </div>
+    </body>
+</html>
