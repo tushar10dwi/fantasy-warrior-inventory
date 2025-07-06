@@ -19,7 +19,8 @@ a {
   cursor: pointer;
 }
 
-#bg-video {
+#bg-video-desktop,
+#bg-video-mobile {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,6 +29,23 @@ a {
   max-height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+#bg-video-mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  #bg-video-desktop {
+    display: none;
+  }
+
+  #bg-video-mobile {
+    display: block;
+    object-fit: fill;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .header {
